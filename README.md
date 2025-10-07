@@ -1,5 +1,5 @@
 
-# Battery Management & Charging Controller (BMS): Board: MKR WIFI 1010 
+# Battery Management & Charging Controller Solution: Board: MKR WIFI 1010 
 
 ## 1. Quick Overview
 
