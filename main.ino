@@ -110,10 +110,10 @@ void setup() {
 
   ///////////////////////////////Create Tasks to run/////////////////////////
 
-  //xTaskCreate(  UART_task,      "UART Task",     256, NULL,   tskIDLE_PRIORITY + 1,   &Handle_UART_task );
+  xTaskCreate(  UART_task,      "UART Task",     256, NULL,   tskIDLE_PRIORITY + 1,   &Handle_UART_task );
   xTaskCreate(  CP_task,        "CP Task",       2*128, NULL,   tskIDLE_PRIORITY + 2,   &Handle_CP_task   );
   xTaskCreate(  PROXI_task,     "PROXI Task",    2*128, NULL,   tskIDLE_PRIORITY + 1,   &Handle_PROXI_task);
-  //xTaskCreate(  BMS_task,       "BMS Task",      2*512, NULL,   tskIDLE_PRIORITY + 1,   &Handle_BMS_task  );
+  xTaskCreate(  BMS_task,       "BMS Task",      2*512, NULL,   tskIDLE_PRIORITY + 1,   &Handle_BMS_task  );
   xTaskCreate(  OBC_task,       "OBC Task",      2*256, NULL,   tskIDLE_PRIORITY + 1,   &Handle_OBC_task  );
   xTaskCreate(  HMI_task,       "HMI Task",      128, NULL,   tskIDLE_PRIORITY + 1,   &Handle_HMI_task  );
   xTaskCreate(  IO_task,       "IO Task",      128, NULL,   tskIDLE_PRIORITY + 1,   &Handle_IO_task  );
